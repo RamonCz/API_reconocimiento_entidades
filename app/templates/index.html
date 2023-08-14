@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Text Input with Send Button (Bootstrap)</title>
+    <!-- Add the Bootstrap CSS file -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <form method="POST" action="/send_text">
+        <div class="form-group">
+          <label for="text-input">Ingresa la oracion:</label>
+          <input type="text" class="form-control" id="text-input" name="text-input">
+        </div>
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form> 
+
+      {% if  prediction %}
+        <p class="text-center">{{prediction}}</p>
+      {% endif %}
+    </div>
+
+    <!-- Add the Bootstrap JavaScript file -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>
